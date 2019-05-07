@@ -1,7 +1,7 @@
 # Личный проект «Нёрдс»
 
 * Студент: [Доронкина Анастасия](https://up.htmlacademy.ru/htmlcss/25/user/1005113).
-* Наставник: `Неизвестно`.
+* Наставник: `https://htmlacademy.ru/profile/alexeycorr`(https://htmlacademy.ru/profile/alexeycorr).
 
 ---
 
