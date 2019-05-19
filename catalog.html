@@ -8,7 +8,7 @@
     <header class="main-header">
         <nav class="main-navigation">
             <a class="main-header-logo" href="#">
-                <img scr="img/nerds-logo.svg" width="160" height="65" alt="Лого веб-студии Нердс">
+                <img src="img/nerds-logo.svg" width="160" height="65" alt="Лого веб-студии Нердс">
             </a>
             <ul class="site-navigation">
                 <li><a href="info.html">Студия</a></li>
@@ -17,7 +17,6 @@
                 <li><a href="contacts.html">Контакты</a></li>
             </ul>
             <a href="basket.html">
-                <svg width="15" height="15" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 15 15"><circle cx="4.5" cy="13.5" r="1.5"/><circle cx="12.5" cy="13.5" r="1.5"/><path d="M15 2H4.07l-.42-2H0v2h2.03l1.99 9H15V9H9.44L15 6.95V2z"/></svg>
                 Корзина
             </a>
         </nav>
@@ -52,6 +51,8 @@
               </label>
             </li>
           </ul>
+      </fieldset>
+      <fieldset>
           <legend>Особенности:</legend>
           <ul>
             <li>
@@ -80,7 +81,7 @@
             </li>
             <li>
               <input type="checkbox" name="busket" id="filter-busket">
-              <label for="filter-sbusket">
+              <label for="filter-busket">
                 Корзина
               </label>
             </li>
@@ -149,25 +150,25 @@
 	  </section>
   </main>
   <footer class="main-footer">
-	  <div class="footer-social">
-		  <ul>
-			  <li>
-                  <a class="social-button" href="#">
-                      <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 26.01 15"><path d="M16.14 11.51c.95-.31 2.18 2 3.48 2.94a2.44 2.44 0 0 0 1.73.53l3.47-.05s1.82-.11 1-1.55a11.8 11.8 0 0 0-2.59-3c-2.17-2-1.88-1.72.74-5.25 1.6-2.15 2.24-3.47 2-4S24.6.69 24.6.69h-3.91a.8.8 0 0 0-.85.52 23 23 0 0 1-1.45 3.08c-1.74 3-2.43 3.14-2.72 3-.66-.44-.49-1.74-.49-2.67 0-2.89.43-4.1-.85-4.41A6.3 6.3 0 0 0 12.5 0a8.27 8.27 0 0 0-3.24.33c-.45.23-.79.72-.58.74a1.75 1.75 0 0 1 1.15.59 3.75 3.75 0 0 1 .39 1.79s.23 3.41-.54 3.83c-.52.29-1.25-.3-2.8-3a25.7 25.7 0 0 1-1.39-2.94A1.25 1.25 0 0 0 5.16.9a1.67 1.67 0 0 0-.6-.24L.85.68S.29.7.09 1s0 .66 0 .66S3 8.49 6.27 12a8.88 8.88 0 0 0 6.46 3h1.55a1.3 1.3 0 0 0 .71-.31 1.15 1.15 0 0 0 .21-.69s-.03-2.18.94-2.49z" fill="#fff"/></svg>
-                  </a>
-                </li>
-              <li>
-                    <a class="social-button" href="#">
-                        <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 12 22"><path d="M12 4V0H8a4 4 0 0 0-4 4v4H0v4h4v10h4V12h4V8H8V4z" fill="#fff"/></svg>
-                    </a>
-                </li>
-              <li>
-                    <a class="social-button" href="#">
-                        <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 21 21"><path d="M18 0H3a3 3 0 0 0-3 3v15a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V3a3 3 0 0 0-3-3zm-7.5 7A3.5 3.5 0 1 1 7 10.5 3.5 3.5 0 0 1 10.5 7zM18 18H3V9h1.18A6.28 6.28 0 0 0 4 10.5a6.5 6.5 0 0 0 13 0 6.28 6.28 0 0 0-.18-1.5H18zm0-11h-4V3h4z" fill="#fff"/></svg>
-                    </a>
+      <div class="footer-social">
+          <ul>
+            <li>
+                <a class="social-button" href="#">
+                    <img src="img/vk-icon.svg" width="80" height="80" alt="Страница Нердс в контакте">
+               </a>
               </li>
-		  </ul>
-	  </div>
+            <li>
+                  <a class="social-button" href="#">
+                  <img src="img/fb-icon.svg" width="80" height="80" alt="Страница Нердс на файсбуке">
+              </a>
+              </li>
+            <li>
+                  <a class="social-button" href="#">
+                  <img src="img/insta-icon.svg" width="80" height="80" alt="Страница Нердс в инстаграм">
+              </a>
+              </li>
+        </ul>
+      </div>
 	  <div>
 		  <p>
 			  <strong>Давайте дружить, это выгодно!</strong>
@@ -175,22 +176,24 @@
 		  <p>Скидка 10% для друзей из социальных сетей!</p>
 	  </div>
  </footer>
+ <section class="modal">
+     <form class="user" method="post"
+           action="https://echo.htmlacademy.ru">
+           <h2>Напишите нам</h2>
+       <p>
+         <label for="user-login">Ваше имя:</label>
+         <input id="user-login" type="text" name="login" placeholder="Имя Фамилия">
+       </p>
+       <p>
+         <label for="user-email">Ваш e-mail:</label>
+         <input id="user-email" type="email" name="email" placeholder="email@example.com">
+       </p>
+       <p>
+         <label for="user-message">Текст письма:</label>
+         <textarea id="user-message" name="message" placeholder="В свободной форме"></textarea>
+       </p>
+       <button class="button" type="submit">Отправить</button>
+    </form>
+</section>
 </body>
 </html>
-<form class="user" method="post"
-          action="https://echo.htmlacademy.ru">
-          <h2>Напишите нам</h2>
-      <p>
-        <label for="user-login">Ваше имя:</label>
-        <input id="user-login" type="text" name="login" placeholder="Имя Фамилия">
-      </p>
-      <p>
-        <label for="user-email">Ваш e-mail:</label>
-        <input id="user-email" type="text" name="email" placeholder="email@example.com">
-      </p>
-      <p>
-        <label for="user-message">Текст письма:</label>
-        <textarea id="user-message" name="message" placeholder="В свободной форме"></textarea>
-      </p>
-      <button class="button" type="submit">Отправить</button>
-</form>
