@@ -1,0 +1,112 @@
+body {
+  margin: 0;
+  padding: 0;
+
+  font-family: "Roboto ", Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+  color: #283136;
+
+  background-color: #fff;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+a {
+  text-decoration: none;
+}
+.main-navigation {
+  text-transform: uppercase;
+  line-height: 30px;
+  color: #000000;
+
+  background-color: #eeeeee;
+}
+.site-navigation,
+.user-navigation {
+  list-style: none;
+}
+
+.site-navigation a,
+.user-navigation a{
+  color: #000000;
+}
+.site-navigation a:hover,
+.site-navigation a:focus,
+.user-navigation a:hover,
+.user-navigation a:focus {
+  color: #fb565a;
+}
+.index-columns {
+  color: #000;
+
+  background-color: #fff;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+.button {
+  font: inherit;
+
+  text-align: center;
+  color: #ffffff;
+  vertical-align: middle;
+  text-transform: uppercase;
+
+  border: none;
+}
+.promo-item-1 {
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    background-size: 300px 150px;
+}
+.promo-item-1 .button{
+    color: #fff;
+    background-color: #fb565a;
+}
+.promo-item-1 a:hover{
+    background-color: #e74246;
+}
+.promo-item-2 .button{
+    color: #fff;
+    background-color: #00ca74;
+}
+.promo-item-2 a:hover{
+    background-color: #00bc6c;
+}
+.promo-item-3 .button{
+    color: #fff;
+    background-color: #efc849;
+}
+.promo-item-3 a:hover{
+    background-color: #eab534;
+}
+.appointment-item input {
+    font: inherit;
+
+    background-color: #cccccc;
+    border:  2px solid #000000;
+}
+.main-footer {
+  color: #000000;
+
+  background-color: #ffffff;
+  background-position: 0 0;
+  background-repeat: repeat;
+}
+
+.footer-contacts a {
+  color: #000000;
+  text-decoration: underline;
+}
+
+.footer-contacts a:hover,
+.footer-contacts a:focus {
+  text-decoration: none;
+}
+
+.footer-social {
+  text-align: center;
+}
+
+.footer-social ul {
+  list-style: none;
+}
