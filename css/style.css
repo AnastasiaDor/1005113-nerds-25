@@ -1,225 +1,227 @@
 body {
   margin: 0;
   padding: 0;
-
-  font-family: "Roboto ", Arial, sans-serif;
+  font-family: "Roboto", "Arial", sans-serif;
   font-size: 16px;
   line-height: 24px;
   color: #283136;
-
   background-color: #fff;
-  background-position: top center;
-  background-repeat: no-repeat;
+  font-weight:normal;
 }
+
 a {
   text-decoration: none;
 }
+
 .main-navigation {
   text-transform: uppercase;
   line-height: 30px;
   color: #000000;
-
   background-color: #eeeeee;
 }
+
 .site-navigation,
 .user-navigation {
   list-style: none;
 }
 
 .site-navigation a,
-.user-navigation a{
+.user-navigation a {
   color: #000000;
 }
+
 .site-navigation a:hover,
 .site-navigation a:focus,
 .user-navigation a:hover,
 .user-navigation a:focus {
   color: #fb565a;
 }
-.basket{
-    color: #000000;
-}
-.basket:hover,
-.basket:focus{
-    color: #fb565a;
-}
-.visually-hidden{
-    display: none;
-}
-.index-columns {
-  color: #000;
 
-  background-color: #fff;
-  background-position: 0 0;
-  background-repeat: repeat;
+.basket {
+  color: #000000;
 }
+
+.basket:hover,
+.basket:focus {
+  color: #fb565a;
+}
+
+.visually-hidden {
+  display: none;
+}
+
 .button {
-  font: inherit;
+  font-family: inherit;
   text-align: center;
   color: #eeeeee;
   vertical-align: middle;
   text-transform: uppercase;
-
   border: none;
+  color: #fff;
+  background-color: #fb565a;
+  font-weight: normal;
+  font-size: 16px;
 }
-.promo-item{
-    position: relative;
-    padding-top: 165px;
-    list-style-type: none;
-}
-.promo-item h3{
-    text-transform: uppercase;
-    font-size: 24px;
-}.promo-item p{
-    color: #283136;
-}
-.promo-item::before{
-    content:"";
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 300px;
-    height: 146px;
-
-    background-repeat: no-repeat;
-}
-.promo-item-web::before{
-    background-image: url("../img/illustration-1.jpg");
-}
-.promo-item-app::before{
-    background-image: url("../img/illustration-2.jpg");
-}
-.promo-item-pre::before{
-    background-image: url("../img/illustration-3.jpg");
+.button:hover {
+  background-color: #e74246;
 }
 
-.promo-item-web {
-    background-position: 0 0;
-    background-repeat: no-repeat;
-    background-size: 300px 150px;
+.promo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
-.promo-item-web .button{
-    color: #fff;
-    background-color: #fb565a;
+.promo-item {
+  position: relative;
+  padding-top: 165px;
 }
-.promo-item-web a:hover{
-    background-color: #e74246;
-}
-.promo-item-app .button{
-    color: #fff;
-    background-color: #00ca74;
-}
-.promo-item-app a:hover{
-    background-color: #00bc6c;
-}
-.promo-item-pre .button{
-    color: #fff;
-    background-color: #efc849;
-}
-.promo-item-pre a:hover{
-    background-color: #eab534;
-}
-.appointment-item input {
-    font: inherit;
 
-    background-color: #cccccc;
-    border:  2px solid #000000;
+.promo-item h3 {
+  text-transform: uppercase;
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: bold;
 }
-.main-footer {
-  color: #000000;
 
-  background-color: #ffffff;
-  background-position: 0 0;
-  background-repeat: repeat;
+.promo-item p {
+  color: #283136;
+  line-height: 24px;
+  font-weight: normal;
 }
+
+.promo-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 300px;
+  height: 146px;
+  background-repeat: no-repeat;
+}
+
+.promo-item-web::before {
+  background-image: url("../img/illustration-1.jpg");
+}
+
+.promo-item-app::before {
+  background-image: url("../img/illustration-2.jpg");
+}
+
+.promo-item-pre::before {
+  background-image: url("../img/illustration-3.jpg");
+}
+
+.promo-item-app .button {
+  background-color: #00ca74;
+}
+.promo-item-app .button:hover {
+  background-color: #00bc6c;
+}
+.promo-item-pre .button {
+  background-color: #efc849;
+}
+.promo-item-pre .button:hover {
+  background-color: #eab534;
+}
+
 .footer-contacts a {
   color: #000000;
   text-decoration: underline;
 }
-.social-button img {
-  fill: #e1e1e1;
-  background-color: black;
-}
 
-.footer-contacts a:hover,
-.footer-contacts a:focus {
-  text-decoration: none;
-}
-
-.footer-social {
-  text-align: left;
+.social-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 80px;
+    height: 80px;
+    background-color: #e1e1e1;
+    border-radius: 50%;
 }
 
 .footer-social ul {
   list-style: none;
 }
-.social-button a{
-    color: #e1e1e1;
+
+.social-button:hover {
+    background-color: #e74246;
 }
-.main-footer strong{
-    font-size: 36px;
-    color: #000000;
-    font-weight: bold;
+
+.main-footer strong {
+  font-size: 36px;
+  color: #000000;
+  font-weight: bold;
 }
-.main-footer p{
-    color: #444444;
+
+.main-footer p {
+  color: #444444;
 }
+
 .modal {
   color: #000000;
   background-color: #ffffff;
- }
-.modal h2{
-    font-size: 45px;
 }
-.modal label{
-    font-weight: bold;
+
+.modal h2 {
+  font-size: 45px;
 }
+
+.modal label {
+  font-weight: bold;
+}
+
 .modal input,
-.modal textarea{
-    color:#444444;
+.modal textarea {
+  color: #444444;
 }
-.modal button{
-    color:#ffffff;
-    background-color:#fb565a;
+
+.sorting legend {
+  font-size: 18px;
+  text-transform: uppercase;
+  font-weight: bold;
 }
-.modal button:hover{
-    background-color: #e74246;
+
+.sorting fieldset {
+  border: 0;
 }
-.sorting legend{
-    font-size: 18px;
-    text-transform: uppercase;
-    font-weight: bold;
+
+.sorting label {
+  color: #283136;
 }
-.sorting fieldset{
-    border: 0;
+
+.sorting ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
-.sorting label{
-    color: #283136;
+
+.sorting button {
+  background-color: #eeeeee;
+  color: #000000;
 }
-.sorting li{
-    list-style-type:none;
+
+.sorting button:hover {
+  background-color: #dfdfdf;
 }
-.sorting button{
-    background-color: #eeeeee;
-    color:#000000;
+
+.description {
+  background-color: #eeeeee;
 }
-.sorting button hover{
-    background-color: #dfdfdf;
+
+.description h3 {
+  font-size: 18px;
+  text-transform: uppercase;
 }
-.description{
-    background-color: #eeeeee;
+
+.description p {
+  color: #666666;
 }
-.description h3{
-    font-size:18px;
-    text-transform: uppercase;
+
+.description .price {
+  color: #ffffff;
+  background-color: #fb565a;
 }
-.description p{
-    color:#666666;
-}
-.description .price{
-    color:#ffffff;
-    background-color:#fb565a;
-}
-.description .price:hover{
-    background-color:#e74246;
+
+.description .price:hover {
+  background-color: #e74246;
 }
