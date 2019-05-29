@@ -163,6 +163,10 @@ a {
   color: #444444;
 }
 
+.catalog-list {
+    list-style: none;
+}
+
 .modal {
   color: #000000;
   background-color: #ffffff;
@@ -201,12 +205,12 @@ a {
   padding: 0;
 }
 
-.sorting button {
+.sorting .button {
   background-color: #eeeeee;
   color: #000000;
 }
 
-.sorting button:hover {
+.sorting .button:hover {
   background-color: #dfdfdf;
 }
 
