@@ -11,6 +11,7 @@ body {
 
 a {
   text-decoration: none;
+  color: #000000;
 }
 
 .main-navigation {
@@ -67,6 +68,11 @@ a {
 }
 
 .promo-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.promo-list-catalog {
     list-style: none;
     margin: 0;
     padding: 0;
