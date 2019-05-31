@@ -13,17 +13,43 @@ a {
   text-decoration: none;
   color: #000000;
 }
+.container{
+    width: 1160px;
+    margin: 0 auto;
+}
+.main-header{
+    min-height: 120px;
+    background-color: #eeeeee;
 
+}
+.main-header-logo {
+    width: 160px;
+    height: 65px;
+    padding: 48px 0 7px 0;
+    display: block;
+}
 .main-navigation {
   text-transform: uppercase;
   line-height: 30px;
   color: #000000;
   background-color: #eeeeee;
-}
+  display: flex;
+  justify-content: space-between;
 
+
+}
+.promo {
+    margin-top: 80px;
+    margin-bottom: 80px;
+    width: auto;
+}
 .site-navigation,
 .user-navigation {
+    width: 440px;
+    display: flex;
   list-style: none;
+  margin: 0 0 0 160px;
+  padding: 0;
 }
 
 .site-navigation a,
@@ -71,6 +97,9 @@ a {
     list-style: none;
     margin: 0;
     padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 .promo-list-catalog {
     list-style: none;
@@ -80,6 +109,7 @@ a {
 .promo-item {
   position: relative;
   padding-top: 165px;
+  width: 300px;
 }
 
 .promo-item h3 {
@@ -108,7 +138,9 @@ a {
 .promo-item-web::before {
   background-image: url("../img/illustration-1.jpg");
 }
-
+.promo-item-app{
+    margin: 0 100px 0 100px;
+}
 .promo-item-app::before {
   background-image: url("../img/illustration-2.jpg");
 }
@@ -144,7 +176,20 @@ a {
     background-color: #e1e1e1;
     border-radius: 50%;
 }
-
+.footer-social{width: 260px;
+}
+.footer-social ul{
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.footer-info{
+    width: 560px;
+      padding-top: 10px;
+    margin-left: auto;
+}
 .footer-social ul {
   list-style: none;
 }
@@ -152,21 +197,38 @@ a {
 .social-button:hover {
     background-color: #e74246;
 }
-
+.main-footer{
+    padding: 70px 0 70px 0;
+    display: flex;
+    justify-content: space-between;
+}
 .main-footer strong {
   font-size: 36px;
+  line-height: 36px;
   color: #000000;
   font-weight: bold;
 }
 
 .main-footer p {
   color: #444444;
+  line-height: 22px;
+  margin-top: 15px;
 }
-
+.conteiner-colons{
+    display: flex;
+}
 .catalog-list {
     list-style: none;
+    width: 760px;
+margin: auto;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 0;
 }
+.catalog-item{
 
+}
 .modal {
   color: #000000;
   background-color: #ffffff;
@@ -184,13 +246,14 @@ a {
 .modal textarea {
   color: #444444;
 }
-
+.sorting{
+    width: 260px;
+}
 .sorting legend {
   font-size: 18px;
   text-transform: uppercase;
   font-weight: bold;
 }
-
 .sorting fieldset {
   border: 0;
 }
