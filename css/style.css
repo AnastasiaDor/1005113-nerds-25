@@ -1,3 +1,12 @@
+
+html {
+    box-sizing: border-box;
+}
+*,
+*::before,
+*::after{
+    box-sizing: inherit;
+}
 body {
   margin: 0;
   padding: 0;
@@ -11,19 +20,12 @@ body {
 
 a {
   text-decoration: none;
-  color: #000000;
 }
-html {
-    box-sizing: border-box;
-}
-*,
-*::before,
-*::after{
-    box-sizing: inherit;
-}
+
 .container {
-  width: 1160px;
+  width: 1200px;
   margin: 0 auto;
+  padding: 0 20px;
 
 }
 
@@ -37,7 +39,6 @@ html {
   width: 160px;
   height: 65px;
   display: block;
-  margin-right: 200px;
 }
 
 .main-navigation{
@@ -47,6 +48,7 @@ html {
   background-color: #eeeeee;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 
 .promo {
@@ -90,7 +92,14 @@ html {
 }
 
 .visually-hidden {
-  display: none;
+ position: absolute;
+ width: 1px;
+ height: 1px;
+ margin: -1px;
+ border: 0;
+ padding: 0;
+ clip: rect(0 0 0 0);
+ overflow: hidden;
 }
 
 .button {
@@ -206,6 +215,8 @@ html {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 360px;
 }
 .footer-social li {
     margin-right: 11px;
