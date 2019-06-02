@@ -50,7 +50,10 @@ a {
   justify-content: space-between;
   align-items: center;
 }
-
+.footer-wrapper{
+    display: flex;
+    flex-wrap: wrap;
+}
 .promo {
   margin-top: 80px;
   margin-bottom: 80px;
@@ -59,8 +62,9 @@ a {
 
 .site-navigation,
 .user-navigation {
-  width: 440px;
+  width: 490px;
   display: flex;
+  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -69,7 +73,6 @@ a {
 .site-navigation a,
 .user-navigation a {
   color: #000000;
-  line-height: 65px;
   display: block;
 }
 .site-navigation li{
@@ -84,6 +87,7 @@ a {
 
 .basket {
   color: #000000;
+  position: relative;
 }
 
 .basket:hover,
@@ -91,13 +95,29 @@ a {
   color: #fb565a;
 }
 
-.visually-hidden {
+.basket::before{
+    content:"";
+    position: absolute;
+    width: 15px;
+height: 15px;
+background-image: url("../img/cart-icon.svg");
+background-repeat: no-repeat;
+background-position: 0 0;
+left: -41px;
+top: 50%;
+margin-top: -8px;
+}
+.visually-hidden:not(:focus):not(:active),
+input[type="checkbox"].visually-hidden,
+input[type="radio"].visually-hidden {
  position: absolute;
  width: 1px;
  height: 1px;
  margin: -1px;
  border: 0;
  padding: 0;
+ white-space: nowrap;
+ clip-path: inset (100%);
  clip: rect(0 0 0 0);
  overflow: hidden;
 }
@@ -146,7 +166,10 @@ a {
   line-height: 30px;
   font-weight: bold;
 }
-
+img {
+max-width: 100%;
+height: auto;
+}
 .promo-item p {
   color: #283136;
   line-height: 24px;
