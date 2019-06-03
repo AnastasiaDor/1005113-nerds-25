@@ -66,7 +66,6 @@ a {
 .user-navigation {
   width: 490px;
   display: flex;
-  flex-wrap: wrap;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -92,6 +91,7 @@ a {
 .basket {
   color: #000000;
   position: relative;
+  padding-left: -15px;
 }
 
 .basket:hover,
@@ -107,7 +107,7 @@ a {
   background-image: url("../img/cart-icon.svg");
   background-repeat: no-repeat;
   background-position: 0 0;
-  left: -41px;
+  left: -27px;
   top: 50%;
   margin-top: -8px;
 }
@@ -247,14 +247,6 @@ img {
   border-radius: 50%;
 }
 
-.footer-social ul {
-  margin: 0;
-  padding: 0;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  max-width: 360px;
 }
 
 .footer-social li {
@@ -269,6 +261,13 @@ img {
 
 .footer-social ul {
   list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 360px;
 }
 
 .social-button:hover {
@@ -310,6 +309,7 @@ img {
 
 .sorting {
   width: 260px;
+  margin-right: 120px;
 }
 
 .sorting legend {
@@ -335,6 +335,8 @@ img {
 .sorting .button {
   background-color: #eeeeee;
   color: #000000;
+  width: 260px;
+  height: 50px;
 }
 
 .sorting .button:hover {
@@ -348,7 +350,6 @@ img {
 
 .description {
   width: 360px;
-  height: 230px;
   padding: 35px 80px 43px;
   background-color: #eeeeee;
   text-align: center;
