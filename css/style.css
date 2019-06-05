@@ -51,26 +51,30 @@ a {
   align-items: center;
 }
 .slider{
-    height: 414px;
     background-color: #eeeeee;
-    padding: 0;
-    margin: 0;
     display: flex;
 }
 
-.slider h2{
-    padding: 10px 0 0 250px;
-    width: 650px;
+.slide-slogan {
+    width: 400px;
     font-size: 55px;
     line-height: 55px;
     color: #000000;
     font-weight: normal;
     margin-bottom: 28px;
 }
-
+.slide {
+    display: none;
+}
+.slide-current{
+    display: block;
+    display: flex;
+}
+.right {
+    margin-left: auto;
+}
 .slider p{
-    padding: 0 0 0 250px;
-    width: 615px;
+    width: 400px;
     color: #283136;
     margin-bottom: 40px;
 }
@@ -84,9 +88,9 @@ height: 414px;
     height: 50px;
     margin: 0 0 0 250px;
 }
-.about{
+.about-wrapper{
     display: flex;
-    padding: 40px 0;
+    padding: 46px 0;
     border-top: 1px solid #eeeeee;
     border-bottom:: 1px solid #eeeeee;
 }
@@ -105,37 +109,51 @@ height: 414px;
     color: #283136;
 }
 
-.about h4{
+ b {
     text-transform: uppercase;
 }
 .about-left li{
     padding: 9px;
 }
-.about-right h4{
+.about-right {
+    width: 360px;
+}
+.about-right:before{
+    content:"";
+    display:block;
+    width:360px;
+    height:208px;
+    background: url("../img/nerds-illustration.jpg") no-repeat scroll;
+margin-bottom:40px;
+}
+.about-right b{
     margin-bottom: 57px;
+    line-height: 24px;
+    transform:uppercase;
 }
-.about-right img{
-    margin-bottom: 13px;
-}
-.advantages{
+.about-right .advantages{
     display: flex;
     justify-content: space-between;
 }
 .advantages-item span:first-child {
     font-size: 45px;
-    line-height: 10px;
+    line-height: 50px;
+    font-weight: bold;
+    margin-top: 20px;
 }
 .advantages-item span:last-child {
     margin-top: 24px
 
 }
-section.logo {
+.logo ul{
     display: flex;
     width: 1087px;
     justify-content: space-between;
+    align-items: center;
     padding: 52px 0 43px 0;
     border-top: 1px solid #eeeeee;
     border-bottom: 1px solid #eeeeee;
+    list-style: none;
 }
 .footer-wrapper {
   display: flex;
@@ -144,8 +162,11 @@ section.logo {
 .slider-left {
     margin-right: 30px;
 }
-.map img{ 
-    width: 100%;
+.map {
+    text-align: center;
+}
+.map img{
+    width: 1440px;
     height: 416px;
 }
 .promo {
@@ -337,7 +358,8 @@ img {
   border-radius: 50%;
   margin-right: 12px;
 }
-
+b::bbefore{
+    background-image: url("../img/nerds-illustration.jpg");
 }
 
 .footer-social li {
@@ -433,6 +455,10 @@ img {
 .sorting .button:hover {
   background-color: #dfdfdf;
 }
+.catalog-item:hover .description,
+.catalog-item:focus-within .description{
+    display: block;
+}
 
 .catalog-item {
     position: relative;
@@ -441,6 +467,7 @@ img {
 }
 
 .description {
+    display: none;
   width: 360px;
   padding: 35px 80px 43px;
   background-color: #eeeeee;
@@ -506,7 +533,9 @@ img {
 
 .modal input,
 .modal textarea {
-  color: #d7dcde;
+opacity: 55%;
+  color: #444444;
+  opacity: 50%;
   display: block;
   margin-top: 10px;
   border-color: #d7dcde;
