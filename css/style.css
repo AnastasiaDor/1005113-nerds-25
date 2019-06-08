@@ -23,17 +23,26 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+}
+
 .container {
   width: 1200px;
   margin: 0 auto;
   padding: 0 20px;
 }
 
+.border-bottom {
+  border-bottom: 1px solid #eee;
+}
+
 .page-title {
   font-size: 55px;
   line-height: 55px;
   margin: 0 0 58px;
-  background: #eee;
+  background-color: #eee;
   text-align: center;
   padding: 67px 0 115px;
 }
@@ -62,11 +71,10 @@ a {
 
 .slider {
   background-color: #eeeeee;
-  display: flex;
+  position: relative;
 }
 
 .slide-slogan {
-  width: 400px;
   font-size: 55px;
   line-height: 55px;
   color: #000000;
@@ -82,70 +90,64 @@ a {
   padding-bottom: 78px;
 }
 
-.slide-current {
+.slide.slide1 {
   background-image: url("../img/slide1.png");
+}
+
+.slide.slide2 {
+  background-image: url("../img/slide2.png");
+}
+
+.slide.slide3 {
+  background-image: url("../img/slide3.png");
+}
+
+.slide-current {
   display: block;
 }
 
-.right {
-  margin-left: auto;
-}
-
-.slider {
-  position: relative;
-}
-
 .slider p {
-  width: 400px;
   color: #283136;
   margin-bottom: 40px;
 }
 
-.slider img {
-  width: 700px;
-  height: 414px;
-}
-
-.slider button {
-  width: 240px;
-  height: 50px;
-  margin: 0 0 0 250px;
-}
-
-.slider .pagination {
+.slider-controls {
   position: absolute;
   height: 18px;
   display: flex;
-  justify-content: space-between;
-  width: 88px;
-  left: 50%;
-  margin-left: -44px;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  left: 0;
+  right: 0;
   bottom: 96px;
 }
 
-.slider .pagination a {
+.slider-controls button {
   width: 18px;
   height: 18px;
-  background: #fff;
+  background-color: #fff;
   border-radius: 10px;
+  margin: 0 8px 0;
+  border: 0;
+  padding: 5px;
 }
 
-.pagination a.slide-current::after {
+.slider-controls button.slide-current::after {
   width: 8px;
   height: 8px;
   display: block;
-  margin-left: 5px;
-  margin-top: 5px;
   border: 2px solid #c2c2c2;
   border-radius: 5px;
   content: "";
 }
 
+.about {
+  padding: 47px 0;
+}
+
 .about-wrapper {
   display: flex;
-  padding: 47px 0;
-  border-top: 1px solid #eeeeee;
-  border-bottom: : 1px solid #eeeeee;
 }
 
 .about-left {
@@ -170,7 +172,7 @@ a {
   display: block;
   width: 25px;
   height: 2px;
-  background: #fb565a;
+  background-color: #fb565a;
   margin-right: 11px;
 }
 
@@ -186,7 +188,7 @@ a {
   color: #283136;
 }
 
-b {
+.about-left b {
   text-transform: uppercase;
 }
 
@@ -199,7 +201,8 @@ b {
   display: block;
   width: 360px;
   height: 208px;
-  background: url("../img/nerds-illustration.jpg") no-repeat scroll;
+  background-image: url("../img/nerds-illustration.jpg");
+  background-repeat: no-repeat;
   margin-bottom: 40px;
 }
 
@@ -232,8 +235,6 @@ b {
 
 .logo {
   padding: 52px 0 43px 0;
-  border-top: 1px solid #eeeeee;
-  border-bottom: 1px solid #eeeeee;
   margin-bottom: 80px;
 }
 
@@ -249,6 +250,7 @@ b {
 .logo li {
   width: 300px;
   text-align: center;
+  position: relative;
 }
 
 .logo li:first-child,
@@ -256,18 +258,19 @@ b {
   width: 280px;
 }
 
-.logo li a::before {
+.logo li::before {
   content: "";
   width: 2px;
+  display: block;
   height: 52px;
-  background: #eee;
+  background-color: #eee;
   position: absolute;
   left: 0;
   top: 50%;
   margin-top: -26px;
 }
 
-.logo li:first-child a::before {
+.logo li:first-child::before {
   display: none;
 }
 
@@ -282,10 +285,6 @@ b {
   flex-wrap: wrap;
 }
 
-.slider-left {
-  margin-right: 30px;
-}
-
 .map {
   text-align: center;
   position: relative;
@@ -294,7 +293,7 @@ b {
 .map .info {
   width: 320px;
   height: 310px;
-  background: #fff;
+  background-color: #fff;
   padding: 53px 50px 48px;
   position: absolute;
   top: 55px;
@@ -302,44 +301,50 @@ b {
   margin-left: -580px;
 }
 
-.map .marker {
-  background: url("../img/map-marker.png") no-repeat scroll;
-  position: absolute;
-  left: 50%;
-  top: 90px;
-  width: 231px;
-  height: 190px;
-  margin-left: 100px;
+.map h4 {
+  font-size: 18px;
+  line-height: 30px;
+  color: #000000;
+  padding: 0;
+  margin: 0 0 34px;
 }
 
-.map img {
-  width: 1440px;
-  height: 416px;
+.map address {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+  font-style: normal;
+  margin-bottom: 23px;
 }
-.map h4{
-    font-size: 18px;
-    line-height: 30px;
-    color: #000000;
-    margin-bottom: : 34px;
-    padding: 0;
+
+.map p {
+  font-size: 16px;
+  line-height: 18px;
+  color: #666666;
+  margin-bottom: 38px;
 }
-.map address{
-    font-size: 16px;
-    line-height: 18px;
-    color: #666666;
-    font-style: normal;
-    margin-bottom: 23px;
+
+.map p a {
+  color: inherit;
 }
-.map p{
-    font-size: 16px;
-    line-height: 18px;
-    color: #666666;
-    margin-bottom: 38px;
+
+.map .feedback {
+  padding: 13px 40px;
+  text-align: center;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 16px;
+  border-radius: 2px;
+  background-color: #fb565a;
+}
+
+.map .feedback:hover {
+  background-color: #e74246;
 }
 
 .promo {
-  margin-top: 80px;
-  margin-bottom: 80px;
+  padding-top: 80px;
+  padding-bottom: 80px;
   width: auto;
 }
 
@@ -412,7 +417,6 @@ input[type="radio"].visually-hidden {
   padding: 13px 40px;
   font-family: inherit;
   text-align: center;
-  color: #eeeeee;
   vertical-align: middle;
   text-transform: uppercase;
   border: none;
@@ -437,11 +441,11 @@ input[type="radio"].visually-hidden {
 .promo-list {
   width: 1100px;
   list-style: none;
-  margin: 0 0 88px 0;
   padding: 0;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
+  margin: 0;
 }
 
 .promo-list-catalog {
@@ -461,11 +465,6 @@ input[type="radio"].visually-hidden {
   font-size: 24px;
   line-height: 30px;
   font-weight: bold;
-}
-
-img {
-  max-width: 100%;
-  height: auto;
 }
 
 .promo-item p {
@@ -525,15 +524,10 @@ img {
   height: 80px;
   background-color: #e1e1e1;
   border-radius: 50%;
-  margin-right: 12px;
-}
-
-b::bbefore {
-  background-image: url("../img/nerds-illustration.jpg");
 }
 
 .footer-social li {
-  margin-right: 11px;
+  margin-right: 12px;
 }
 
 .footer-info {
