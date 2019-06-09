@@ -17,6 +17,7 @@ body {
   color: #283136;
   background-color: #fff;
   font-weight: normal;
+  min-width: 1200px;
 }
 
 a {
@@ -113,14 +114,26 @@ img {
 
 .slider-controls {
   position: absolute;
-  height: 18px;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  flex-wrap: wrap;
-  left: 0;
-  right: 0;
-  bottom: 96px;
+
+height: 18px;
+
+display: flex;
+
+flex-direction: row;
+
+justify-content: center;
+
+flex-wrap: wrap;
+
+left: 50%;
+
+right: 0;
+
+bottom: 96px;
+
+width: 340px;
+
+margin-left: -170px;
 }
 
 .slider-controls button {
@@ -133,7 +146,7 @@ img {
   padding: 5px;
 }
 
-.slider-controls button.slide-current::after {
+.slider-controls .slide-current::after {
   width: 8px;
   height: 8px;
   display: block;
@@ -209,7 +222,7 @@ img {
 .about-right b {
   margin-bottom: 57px;
   line-height: 24px;
-  transform: uppercase;
+  text-transform: uppercase;
 }
 
 .about-right .advantages {
@@ -223,14 +236,14 @@ img {
   font-weight: bold;
 }
 
-.advantages-item span:first-child span {
+.advantages-item span:last-child {
+  margin-top: 24px
+}
+
+.advantages-item sup {
   font-size: 21px;
   vertical-align: super;
   margin: 0;
-}
-
-.advantages-item span:last-child {
-  margin-top: 24px
 }
 
 .logo {
@@ -279,6 +292,15 @@ img {
   line-height: 0;
   position: relative;
 }
+.logo img{
+	opacity:0.2;
+}
+.logo img:hover{
+	opacity:1;
+}
+.logo img:active{
+	opacity:0.1;
+}
 
 .footer-wrapper {
   display: flex;
@@ -316,7 +338,6 @@ img {
   font-style: normal;
   margin-bottom: 23px;
 }
-
 .map p {
   font-size: 16px;
   line-height: 18px;
@@ -324,7 +345,7 @@ img {
   margin-bottom: 38px;
 }
 
-.map p a {
+.map a {
   color: inherit;
 }
 
@@ -527,7 +548,7 @@ input[type="radio"].visually-hidden {
 }
 
 .footer-social li {
-  margin-right: 12px;
+  margin: 0 12px 12px 0;
 }
 
 .footer-info {
@@ -544,7 +565,7 @@ input[type="radio"].visually-hidden {
   flex-direction: row;
   justify-content: flex-start;
   flex-wrap: wrap;
-  max-width: 360px;
+  max-width: 550px;
 }
 
 .social-button:hover {
@@ -630,11 +651,22 @@ input[type="radio"].visually-hidden {
   line-height: 0;
   margin-bottom: 31px;
 }
+.catalog-item::before {
+  height:40px;
+  background-image:url("../img/browser.svg");
+  background-repeat:no-repeat;
+  opacity:0.12;
+  display:block;
+  content:"";
+}
+.catalog-item:hover::before{
+	opacity:1;
+}
 
 .description {
   display: none;
   width: 360px;
-  padding: 35px 80px 43px;
+  padding: 35px 43px 43px;
   background-color: #eeeeee;
   text-align: center;
   position: absolute;
@@ -668,6 +700,7 @@ input[type="radio"].visually-hidden {
   height: 50px;
   text-transform: uppercase;
   line-height: 50px;
+  margin:0 auto;
 }
 
 .description .price:hover {
@@ -682,15 +715,34 @@ input[type="radio"].visually-hidden {
   width: 960px;
   padding: 70px 100px 84px;
   box-shadow: 0 30px 50px rgba(0, 0, 0, 0.7);
-  bottom: 180px;
+  top: 50%;
   left: 50%;
-  margin-left: -480px;
+  transform: translate(-50%, -50%);
+}
+@keyframes bounce {
+    0% {transform: translate(-50%, -300%);}
+    100% {transform: translate(-50%, -50%);}
+
+}
+.modal-show{
+    display: block;
+    animation-name: bounce;
+    animation-duration: 0.6s;
+}
+@keyframes shake {
+    0%, 100% {transform: translate(-50%, -50%);}
+    10%, 30%, 50%, 70%, 90% {transform: translate(-51%, -50%);}
+    20%, 40%, 60%, 80% {transform: translate(-49%, -50%);}
+}
+.modal-error{
+    animation-name: shake;
+    animation-duration: 0.6s;
 }
 
 .modal-close {
   position: absolute;
   font-size: 0;
-  background-color: red;
+  background-color: #fff;
   border: 0;
   cursor: pointer;
   top: 78px;
