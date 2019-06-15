@@ -17,9 +17,9 @@
           <img src="img/nerds-logo.svg" width="160" height="65" alt="Лого веб-студии Нердс">
         </a>
         <ul class="site-navigation">
-          <li><a href="info.html">Студия</a></li>
+          <li><a href="index.html">Студия</a></li>
           <li><a href="customers.html">Клиенты</a></li>
-          <li><a href="catalog.html">Магазин</a></li>
+          <li><a href="catalog.html" class="current">Магазин</a></li>
           <li><a href="contacts.html">Контакты</a></li>
         </ul>
         <a class="basket" href="basket.html">Корзина</a>
@@ -29,11 +29,24 @@
   <h1 class="page-title">Магазин готовых шаблонов</h1>
   <main class="container">
     <div class="conteiner-colons">
-      <section class="filters">
-        <!-- Здесь будет форма -->
-      </section>
       <section class="sorting">
-        <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+	  <form class="filter" method="get" action="https://echo.htmlacademy.ru">
+		   <fieldset class="filter-item">
+			 <legend>Стоимость:</legend>
+			 <div class="range-filter">
+			   <div class="range-controls">
+				 <div class="scale">
+					<div class="bar"></div>
+				 </div>
+				 <div class="toggle toggle-min"></div>
+				 <div class="toggle toggle-max"></div>
+			   </div>
+			   <div class="price-controls">
+				 <label class="min-price">от <input name="min-price" type="text" value="0"></label>
+				 <label class="max-price">до <input name="max-price" type="text" value="15000"></label>
+			   </div>
+			 </div>
+		   </fieldset>
           <fieldset>
             <legend>Сетка:</legend>
             <ul>
@@ -58,7 +71,7 @@
             </ul>
           </fieldset>
           <fieldset>
-            <legend>Особенности:</legend>
+            <legend class="features">Особенности:</legend>
             <ul>
               <li>
                 <input type="checkbox" name="slider" id="filter-slider" checked>
@@ -85,7 +98,7 @@
                 </label>
               </li>
               <li>
-                <input type="checkbox" name="busket" id="filter-busket">
+                <input type="checkbox" name="busket" id="filter-busket" disabled>
                 <label for="filter-busket">
                   Корзина
                 </label>
@@ -95,6 +108,17 @@
           <button class="button" type="submit">Показать</button>
         </form>
       </section>
+      <div>
+      <section class="filter-horizont">
+          <p>Сортировать</p>
+          <ul>
+              <li class="active">по цене</li>
+              <li>по типу</li>
+              <li>по названию</li>
+          </ul>
+          <div class="index up active"></div>
+		  <div class="index down"></div>
+      </section>
       <section class="catalog">
         <ul class="catalog-list">
           <li class="catalog-item">
@@ -102,7 +126,7 @@
             <div class="description">
               <h3><a href="#">Sedona</a></h3>
               <p>Информационный сайт для туристов</p>
-              <div class="price">9 900 руб.</div>
+              <div class="price button">9 900 руб.</div>
             </div>
           </li>
           <li class="catalog-item">
@@ -111,7 +135,7 @@
               <h3><a href="#">Pink App</a></h3>
               <p>Продуктовый лендинг
                 приложения для iOS и Android</p>
-              <div class="price">9 900 руб.</div>
+              <div class="price button">9 900 руб.</div>
             </div>
           </li>
           <li class="catalog-item">
@@ -119,7 +143,7 @@
             <div class="description">
               <h3><a href="#">Barbershop</a></h3>
               <p>Сайт салона красоты. Для мужчин, да.</p>
-              <div class="price">9 900 руб.</div>
+              <div class="price button">9 900 руб.</div>
             </div>
           </li>
           <li class="catalog-item">
@@ -127,7 +151,7 @@
             <div class="description">
               <h3><a href="#">Милые штучки</a></h3>
               <p>Интернет-магазин вязаных игрушек</p>
-              <div class="price">9 900 руб.</div>
+              <div class="price button">9 900 руб.</div>
             </div>
           </li>
           <li class="catalog-item">
@@ -135,7 +159,7 @@
             <div class="description">
               <h3><a href="#">A Plus</a></h3>
               <p>Лендинг курсов повышения квалификации</p>
-              <div class="price">9 900 руб.</div>
+              <div class="price button">9 900 руб.</div>
             </div>
           </li>
           <li class="catalog-item">
@@ -143,13 +167,36 @@
             <div class="description">
               <h3><a href="#">КВАСТ</a></h3>
               <p>Промо-сайт производителя крафтового кваса</p>
-              <div class="price">9 900 руб.</div>
+              <div class="price button">9 900 руб.</div>
             </div>
           </li>
         </ul>
       </section>
+		<section class="pagination">
+			<ul>
+				<li class="active"><a href="#">1</a></li>
+				<li><a href="#">2</a></li>
+				<li><a href="#">3</a></li>
+				<li class="next"><a href="#">Следующая</a></li>
+			</ul>
+		</section>
     </div>
+</div>
   </main>
+  <section class="map">
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1998.6037872533277!2d30.320858716096975!3d59.93871648187614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4696310fca145cc1%3A0x42b32648d8238007!2z0JHQvtC70YzRiNCw0Y8g0JrQvtC90Y7RiNC10L3QvdCw0Y8g0YPQuy4sIDE5LzgsINCh0LDQvdC60YIt0J_QtdGC0LXRgNCx0YPRgNCzLCAxOTExODY!5e0!3m2!1sru!2sru!4v1560103154875!5m2!1sru!2sru"
+      height="416" style="border:0; width:100%" allowfullscreen></iframe>
+<!-- <img src="img/map.png" alt="Адрес: Санкт-Петербург, ул. Б. Конюшенная, д. 19/8" width="1440" height="416">-->
+    <div class="info">
+      <h4>NЁRDS DESIGN STUDIO</h4>
+      <address>191186, Санкт-Петербург, ул. Б. Конюшенная, д. 19/8
+        <p>тел.
+          <a href="tel:88122757575" class="phone">+7 (812) 275-75-75</a>
+        </p>
+      </address>
+      <a href="#" class="button feedback">Напишите нам</a>
+    </div>
+  </section>
   <footer class="main-footer">
     <div class="container">
       <div class="footer-wrapper">
@@ -181,12 +228,13 @@
     </div>
   </footer>
   <section class="modal">
+    <button class="modal-close" type="button">Закрыть</button>
     <form class="user" method="post" action="https://echo.htmlacademy.ru">
       <h2>Напишите нам</h2>
       <div class="modal-user">
         <p>
           <label for="user-login">Ваше имя:</label>
-          <input id="user-login" type="text" name="login" placeholder="Имя Фамилия">
+          <input id="user-login" type="text" name="login" placeholder="Имя Фамилия" required>
         </p>
         <p>
           <label for="user-email">Ваш e-mail:</label>
@@ -200,6 +248,6 @@
       <button class="button" type="submit">Отправить</button>
     </form>
   </section>
+  <script src=js/popup.js></script>
 </body>
-
 </html>
