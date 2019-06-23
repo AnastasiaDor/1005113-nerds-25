@@ -120,7 +120,7 @@ img {
 	width: 260px;
 	margin-top: 31px;
 }
-.filter .button:hover, 
+.filter .button:hover,
 .filter .button:focus {
 	background-color: #dfdfdf;
 }
@@ -359,7 +359,7 @@ img {
 }
 .site-navigation a:hover,
 .site-navigation a:focus,
-.basket:hover, 
+.basket:hover,
 .basket:focus {
 	color: #fb565a;
 }
@@ -613,7 +613,7 @@ img {
 .logo a:active {
 	opacity: 0.1;
 }
- 
+
 /* ---------- Map ---------- */
 .map {
 	position: relative;
